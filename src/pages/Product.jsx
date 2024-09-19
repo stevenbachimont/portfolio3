@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { useDispatch } from "react-redux";
 import { addCart } from "../redux/action";
+import productsData from "../data/products.json";
 
 import { Footer, Navbar } from "../components";
 
@@ -21,17 +22,13 @@ const Product = () => {
   };
 
   useEffect(() => {
-    const getProduct = async () => {
+    const getProduct = () => {
       setLoading(true);
       setLoading2(true);
-      const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-      const data = await response.json();
+      const data = productsData.find((p) => p.id === parseInt(id));
       setProduct(data);
       setLoading(false);
-      const response2 = await fetch(
-        `https://fakestoreapi.com/products/category/${data.category}`
-      );
-      const data2 = await response2.json();
+      const data2 = productsData.filter((p) => p.category === data.category && p.id !== data.id);
       setSimilarProducts(data2);
       setLoading2(false);
     };
