@@ -177,7 +177,7 @@ const Product = () => {
           <div className="d-none d-md-block">
           <h2 className="">You may also Like</h2>
             <Marquee
-              pauseOnHover={true}
+              pauseOnHover={false}
               pauseOnClick={true}
               speed={50}
             >
