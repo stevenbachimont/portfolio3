@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  web:
+    build: .
+    ports:
+      - "8282:8282"
+
+    networks:
+      - app-network
+
+
+
+networks:
+  app-network:
+    driver: bridge
