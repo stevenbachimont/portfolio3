@@ -124,7 +124,7 @@ const Products = () => {
                       </p>
                     </div>
                     <ul className="list-group list-group-flush">
-                      <li className="list-group-item lead">$ {product.price}</li>
+                      <li className="list-group-item lead">€ {product.price}</li>
                     </ul>
                     <div className="card-body">
                       <Link
