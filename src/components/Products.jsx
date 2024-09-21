@@ -68,45 +68,57 @@ const Products = () => {
   const ShowProducts = () => {
     return (
         <>
-          <div className="buttons text-center py-5">
-            <button
-                className="btn btn-outline-dark btn-sm m-2"
-                onClick={() => setFilter(data)}
-            >
-              All
-            </button>
-            <button
-                className="btn btn-outline-dark btn-sm m-2"
-                onClick={() => filterProduct("personal projects")}
-            >
-                personal projects
-            </button>
-            <button
-                className="btn btn-outline-dark btn-sm m-2"
-                onClick={() => filterProduct("women's clothing")}
-            >
-              Women's Clothing
-            </button>
-            <button
-                className="btn btn-outline-dark btn-sm m-2"
-                onClick={() => filterProduct("jewelery")}
-            >
-              Jewelery
-            </button>
-            <button
-                className="btn btn-outline-dark btn-sm m-2"
-                onClick={() => filterProduct("electronics")}
-            >
-              Electronics
-            </button>
-          </div>
+            <div className="buttons text-center py-5">
+                <button
+                    className="btn btn-outline-dark btn-sm m-2"
+                    onClick={() => setFilter(data)}
+                >
+                    All
+                </button>
+                <button
+                    className="btn btn-outline-dark btn-sm m-2"
+                    onClick={() => filterProduct("personal projects")}
+                >
+                    personal projects
+                </button>
+                <button
+                    className="btn btn-outline-dark btn-sm m-2"
+                    onClick={() => filterProduct("group projects")}
+                >
+                    group projects
+                </button>
+                <button
+                    className="btn btn-outline-dark btn-sm m-2"
+                    onClick={() => filterProduct("professional projects")}
+                >
+                    professional projects
+                </button>
+                <button
+                    className="btn btn-outline-dark btn-sm m-2"
+                    onClick={() => filterProduct("skills")}
+                >
+                    skills
+                </button>
+                <button
+                    className="btn btn-outline-dark btn-sm m-2"
+                    onClick={() => filterProduct("front")}
+                >
+                    front
+                </button>
+                <button
+                    className="btn btn-outline-dark btn-sm m-2"
+                    onClick={() => filterProduct("back")}
+                >
+                    back
+                </button>
+            </div>
 
-          {filter.map((product) => {
-            return (
-                <div
-                    id={product.id}
-                    key={product.id}
-                    className="col-md-4 col-sm-6 col-xs-8 col-12 mb-4"
+            {filter.map((product) => {
+                return (
+                    <div
+                        id={product.id}
+                        key={product.id}
+                        className="col-md-4 col-sm-6 col-xs-8 col-12 mb-4"
                 >
                   <div className="card text-center h-100" key={product.id}>
                     <img
