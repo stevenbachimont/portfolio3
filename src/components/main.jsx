@@ -4,10 +4,9 @@ const Home = () => {
   return (
     <>
       <div className="hero border-1 pb-3">
-        <div className="card bg-dark text-white border-0 mx-3">
-          <img
+        <div className="card text-white border-0 mx-3" style={{backgroundColor: '#984307'}}><img
             className="card-img img-fluid"
-            src="./assets/main.png.jpg"
+            src="./assets/main2.png.png"
             alt="Card"
             height={500}
           />
