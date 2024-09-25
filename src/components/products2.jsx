@@ -8,6 +8,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
+import productsData from "../data/products.json";
+
 const Products = () => {
     const [data, setData] = useState([]);
     const [filter, setFilter] = useState(data);
@@ -20,18 +22,11 @@ const Products = () => {
     };
 
     useEffect(() => {
-        const getProducts = async () => {
+        const getProducts = () => {
             setLoading(true);
-            try {
-                const response = await fetch("http://82.165.63.232:3310/api/products");
-                const products = await response.json();
-                setData(products);
-                setFilter(products);
-            } catch (error) {
-                console.error("Failed to fetch products", error);
-            } finally {
-                setLoading(false);
-            }
+            setData(productsData);
+            setFilter(productsData);
+            setLoading(false);
         };
 
         getProducts();
@@ -84,7 +79,7 @@ const Products = () => {
                         className="btn btn-outline-dark btn-sm m-2"
                         onClick={() => filterProduct("personal projects")}
                     >
-                        Personal Projects
+                        personal projects
                     </button>
                     <button
                         className="btn btn-outline-dark btn-sm m-2"
