@@ -23,7 +23,7 @@ const Products = () => {
         const getProducts = async () => {
             setLoading(true);
             try {
-                const response = await fetch("http://82.165.63.232:3310/api/products");
+                const response = await fetch("https://api.stevenbachimont.com/api/products");
                 const products = await response.json();
                 setData(products);
                 setFilter(products);

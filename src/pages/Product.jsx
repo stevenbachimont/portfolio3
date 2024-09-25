@@ -24,12 +24,12 @@ const Product = () => {
       setLoading(true);
       setLoading2(true);
       try {
-        const response = await fetch(`http://82.165.63.232:3310/api/products/${id}`);
+        const response = await fetch(`https://api.stevenbachimont.com/api/products/${id}`);
         const data = await response.json();
         setProduct(data);
         setLoading(false);
 
-        const similarResponse = await fetch(`http://82.165.63.232:3310/api/products?category=${data.category}`);
+        const similarResponse = await fetch(`https://api.stevenbachimont.com/api/products?category=${data.category}`);
         const similarData = await similarResponse.json();
         const filteredProducts = similarData.filter((p) => p.id !== data.id);
         setSimilarProducts(filteredProducts);
