@@ -88,21 +88,33 @@ const Products = () => {
                     </button>
                     <button
                         className="btn btn-outline-dark btn-sm m-2"
-                        onClick={() => filterProduct("women's clothing")}
+                        onClick={() => filterProduct("group projects")}
                     >
-                        Women's Clothing
+                        group projects
                     </button>
                     <button
                         className="btn btn-outline-dark btn-sm m-2"
-                        onClick={() => filterProduct("jewelery")}
+                        onClick={() => filterProduct("professional projects")}
                     >
-                        Jewelery
+                        professional projects
                     </button>
                     <button
                         className="btn btn-outline-dark btn-sm m-2"
-                        onClick={() => filterProduct("electronics")}
+                        onClick={() => filterProduct("skills")}
                     >
-                        Electronics
+                        skills
+                    </button>
+                    <button
+                        className="btn btn-outline-dark btn-sm m-2"
+                        onClick={() => filterProduct("front")}
+                    >
+                        front
+                    </button>
+                    <button
+                        className="btn btn-outline-dark btn-sm m-2"
+                        onClick={() => filterProduct("back")}
+                    >
+                        back
                     </button>
                 </div>
 
