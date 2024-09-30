@@ -23,7 +23,7 @@ const Products = () => {
         const getProducts = async () => {
             setLoading(true);
             try {
-                const response = await fetch("https://api.stevenbachimont.com/api/products");
+                const response = await fetch("https://api.stevenbachimont.com/api/projects");
                 const products = await response.json();
                 setData(products);
                 setFilter(products);
@@ -140,9 +140,7 @@ const Products = () => {
                                         {product.description.substring(0, 90)}...
                                     </p>
                                 </div>
-                                <ul className="list-group list-group-flush">
-                                    <li className="list-group-item lead">€ {product.price}</li>
-                                </ul>
+
                                 <div className="card-body">
                                     <Link
                                         to={"/product/" + product.id}
