@@ -6,9 +6,7 @@ export default defineConfig({
     server: {
         port: 8282,
         hmr: {
-            host: 'portfolio3.stevenbachimont.com',
-            protocol: 'wss',
-            port: 443,  // Port sécurisé pour WebSocket (si HTTPS)
+            overlay: false,
         },
     },
 });
