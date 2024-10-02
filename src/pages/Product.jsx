@@ -27,6 +27,7 @@ const Product = () => {
         const response = await fetch(`https://api.stevenbachimont.com/api/projects/${id}`);
         const data = await response.json();
         setProduct(data);
+        console.log(data);
         setLoading(false);
 
         const similarResponse = await fetch(`https://api.stevenbachimont.com/api/projects?category=${data.category}`);
