@@ -23,7 +23,9 @@ const Products = () => {
         const getProducts = async () => {
             setLoading(true);
             try {
-                const response = await fetch("https://api.stevenbachimont.com/api/projects");
+                const response = await fetch("https://api.stevenbachimont.com/api/projects", {
+                    mode: 'no-cors'
+                });
                 const products = await response.json();
                 setData(products);
                 setFilter(products);

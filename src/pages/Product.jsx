@@ -24,13 +24,17 @@ const Product = () => {
       setLoading(true);
       setLoading2(true);
       try {
-        const response = await fetch(`https://api.stevenbachimont.com/api/projects/${id}`);
+        const response = await fetch(`https://api.stevenbachimont.com/api/projects/${id}`, {
+          mode: 'no-cors'
+        });
         const data = await response.json();
         setProduct(data);
         console.log(data);
         setLoading(false);
 
-        const similarResponse = await fetch(`https://api.stevenbachimont.com/api/projects?category=${data.category}`);
+        const similarResponse = await fetch(`https://api.stevenbachimont.com/api/projects?category=${data.category}`, {
+          mode: 'no-cors'
+        });
         const similarData = await similarResponse.json();
         const filteredProducts = similarData.filter((p) => p.id !== data.id);
         setSimilarProducts(filteredProducts);
