@@ -60,3 +60,17 @@
 input[type="radio"] {
     display: none;
 }
+
+.addToCartButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.addToCartButton:hover {
+    background-color: #218838;
+}

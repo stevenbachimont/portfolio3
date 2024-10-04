@@ -31,7 +31,6 @@ function Main() {
         <>
             <div className="title-container">
 
-
             </div>
 
             <div className="category-selector">
@@ -47,6 +46,8 @@ function Main() {
                 {filteredProjects.map(project => (
                     <Card key={project.id} {...project} />
                 ))}
+            </div>
+            <div className="bottom-container">
             </div>
         </>
     );

@@ -19,6 +19,13 @@
     background-color: rgba(22, 20, 23, 0);
 }
 
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
 .card {
     width: 300px;
 }
