@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgb(102, 99, 88);
-  background-color: #181818;
+  background-color: #d5d3d3;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-    background-color: #181818;
+    background-color: #cac5c5;
 }
 
 .h1 {

@@ -2,8 +2,8 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #191a27;
-    color: #8a876d;
+    background-color: #757577;
+    color: #050505;
     position: fixed;
     top: 0;
     left: 0;
@@ -18,7 +18,7 @@ nav {
     text-align: center;
     font-size: 24px;
     margin: 10px;
-    color: #8a876d;
+    color: #050505;
 }
 
 .headTitle:hover {
@@ -39,8 +39,6 @@ nav {
     margin-bottom: 5px;
     cursor: pointer;
 }
-
-
 
 
 nav:hover {

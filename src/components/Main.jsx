@@ -9,7 +9,7 @@ function Main() {
     const [selectedCategory, setSelectedCategory] = useState('');
 
     useEffect(() => {
-        fetch('https://api.stevenbachimont.com/api/projects')
+        fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
             .then(response => response.json())
             .then(data => {
                 setProjects(data);
