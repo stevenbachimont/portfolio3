@@ -1,8 +1,8 @@
 function Page3() {
     return (
         <div>
-            <h1>Page3</h1>
-            <p>vous êtes à la page...</p>
+            <h1>Cart</h1>
+            <p>passer à la caisse !</p>
         </div>
     );
 }

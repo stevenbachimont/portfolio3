@@ -12,7 +12,7 @@ function Card({ image, title, description, rating_rate }) {
             <h2 className={styles.violetColor}>{title}</h2>
             <p>{description}</p>
             <StarRating rating={rating_rate} />
-            <Link to="/page1">
+            <Link to="/page3">
                 <button className={styles.addToCartButton}>Add to Cart</button>
             </Link>
         </div>
