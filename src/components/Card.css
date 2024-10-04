@@ -1,0 +1,35 @@
+.card {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card:hover {
+    background-color: #505050;
+    scale: 110%;
+    color: #ffce00;
+    cursor: pointer;
+}
+
+
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+}
+
+h4 {
+    margin: 0;
+}
+
+a {
+    color: #eadede;
+    text-decoration: none;
+}

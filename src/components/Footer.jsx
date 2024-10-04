@@ -1,22 +1,15 @@
-import React from "react";
+import "/src/components/Footer.css"
 
-const Footer = () => {
-  return (
-    <>
-      <footer className="mb-0 text-center">
-        <div className="d-flex align-items-center justify-content-center pb-5">
-          <div className="col-md-6">
-            <p className="mb-3 mb-md-0">Made by {" "}
-              <a  href="https://stevenbachimont.com" className="text-decoration-underline text-dark fs-5" target="_blank" rel="noreferrer">steven</a>
-            </p>
-            <a className="text-dark fs-4" href="https://github.com/stevenbachimont" target="_blank" rel="noreferrer">
-              <i className="fa fa-github"></i>
-            </a>
-          </div>
-        </div>
-      </footer>
-    </>
-  );
-};
+function Footer() {
+    return(
+        <footer>
+            <h2 className="footTitle">Remplissez votre panier et contactez moi !!</h2>
+            <ul className="footList">
+                <li className="footLien">Merci pour votre visite</li>
+            </ul>
+        </footer>
+    )
+
+}
 
 export default Footer;
