@@ -1,8 +1,8 @@
 .cart-container {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0);
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #292929;
 }
 
 .cart-container ul {
