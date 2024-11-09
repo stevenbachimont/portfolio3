@@ -3,7 +3,7 @@ import { useCart } from '../contexte/CartProvider';
 import './styles/cart.css';
 
 function Cart() {
-    const { cart, removeFromCart } = useCart(); // Utilisation du hook personnalisé
+    const { cart, removeFromCart } = useCart();
 
     const handleRemove = (id) => {
         removeFromCart(id);

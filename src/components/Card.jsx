@@ -1,17 +1,19 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../contexte/CartProvider'; // Assurez-vous que le chemin est correct
+import { CartContext } from '../contexte/CartProvider';
 import './Card.css';
 import StarRating from './StarRating.jsx';
 import styles from './Card.module.css';
 
-// eslint-disable-next-line react/prop-types
 function Card({ id, image, title, description, rating_rate }) {
-    const { addToCart } = useContext(CartContext);  // Utilisation de useContext pour accéder à addToCart
+    const { cart, addToCart } = useContext(CartContext);
 
-    // Fonction pour ajouter un projet au panier
+    const isInCart = cart.some(item => item.id === id);
+
     const handleAddToCart = () => {
-        const project = { id, image, title, description, rating_rate };
-        addToCart(project);
+        if (!isInCart) {
+            const project = { id, image, title, description, rating_rate };
+            addToCart(project);
+        }
     };
 
     return (
@@ -20,7 +22,13 @@ function Card({ id, image, title, description, rating_rate }) {
             <h2 className={styles.violetColor}>{title}</h2>
             <p>{description}</p>
             <StarRating rating={rating_rate} />
-            <button className={styles.addToCartButton} onClick={handleAddToCart}>Add to Cart</button>
+            <button
+                className={styles.addToCartButton}
+                onClick={handleAddToCart}
+                disabled={isInCart}
+            >
+                {isInCart ? "Added" : "Add to Cart"}
+            </button>
         </div>
     );
 }
