@@ -1,99 +1,167 @@
+/* Conteneur principal */
 .checkout-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
 }
 
 .order-summary {
-    width: 45%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    width: 60%;
+    max-width: 800px;
+    margin-bottom: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
+    border-color: #131212;
+    background-color: #8e8c8c;
+    border-radius: 2%;
+    color: #dedddd;
 }
 
-.order-summary h2 {
+h2 {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* Cart items */
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .cart-item {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
 }
 
 .cart-item-image {
-    width: 60px; /* Taille réduite de l'image */
+    width: 60px;
     height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
     margin-right: 15px;
-    border-radius: 8px;
-    object-fit: cover; /* Assure le recadrage pour garder les proportions */
 }
 
+.cart-item div {
+    flex-grow: 1;
+}
+
+.cart-item h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-item p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Formulaire Checkout */
 .checkout-form {
-    width: 45%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .checkout-form h2 {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.checkout-form p {
+    text-align: center;
     margin-bottom: 15px;
+    font-size: 16px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-}
-
-textarea {
+.checkout-form input {
+    width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    margin-top: 5px;
-    resize: vertical;
-    height: 100px;
-    font-family: inherit;
-    font-size: 1rem;
-    background-color: #232020;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-button {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #a80526;
+.checkout-form input[type="date"],
+.checkout-form input[type="time"] {
+    width: 48%;
+    margin-right: 4%;
+}
+
+.checkout-form input[type="time"] {
+    margin-right: 0;
+}
+
+.checkout-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
     border: none;
-    color: #fff;
-    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #a34155;
+.checkout-form button:hover {
+    background-color: #45a049;
 }
 
-
+/* Responsive design */
 @media (max-width: 768px) {
-    .checkout-container {
-        flex-direction: column;
-        align-items: center;
+    .cart-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cart-item-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .checkout-form input[type="date"],
+    .checkout-form input[type="time"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .checkout-form button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-form {
+        padding: 15px;
+    }
+
+    .cart-item h3 {
+        font-size: 14px;
+    }
+
+    .cart-item p {
+        font-size: 12px;
+    }
+
+    .checkout-form input {
+        font-size: 14px;
+    }
+
+    .checkout-form button {
+        font-size: 15px;
     }
 }

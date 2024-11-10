@@ -12,7 +12,7 @@ function Cart() {
 
     return (
         <div className="cart-container">
-            <h2>Your Shopping Cart</h2>
+            <h2>Your Skills Cart</h2>
             {cart.length === 0 ? (
                 <p>Your cart is empty.</p>
             ) : (
@@ -21,11 +21,10 @@ function Cart() {
                         <li key={item.id}>
                             <img src={item.image} alt={item.title} />
                             <h3>{item.title}</h3>
-                            <p>{item.description}</p>
                             <button onClick={() => handleRemove(item.id)}>Remove</button>
                         </li>
                     ))}
-                    <button onClick={() => navigate('/checkout')}>Checkout</button>
+                    <button className="checkout" onClick={() => navigate('/checkout')}>Checkout</button>
                 </ul>
 
             )}
