@@ -6,8 +6,6 @@ function Head() {
         <nav>
             <Link to="/" className="headTitle">shopfolio</Link>
             <ul className="headList">
-                <Link to="/page1" className="headLien">...</Link>
-                <Link to="/page2" className="headLien">***</Link>
                 <Link to="/cart" className="headLien">cart</Link>
             </ul>
         </nav>

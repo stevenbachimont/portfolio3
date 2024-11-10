@@ -1,9 +1,10 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../contexte/CartProvider';
 import './styles/cart.css';
 
 function Cart() {
     const { cart, removeFromCart } = useCart();
+    const navigate = useNavigate();
 
     const handleRemove = (id) => {
         removeFromCart(id);
@@ -24,7 +25,9 @@ function Cart() {
                             <button onClick={() => handleRemove(item.id)}>Remove</button>
                         </li>
                     ))}
+                    <button onClick={() => navigate('/checkout')}>Checkout</button>
                 </ul>
+
             )}
         </div>
     );
