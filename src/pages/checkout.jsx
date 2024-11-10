@@ -1,50 +1,117 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../contexte/CartProvider'; // Assurez-vous que le chemin est correct
+import React, { useState } from 'react';
+import { useCart } from '../contexte/CartProvider';
 import './styles/checkout.css';
 
 function Checkout() {
-    const { cart } = useContext(CartContext);
+    const { cart } = useCart();
+    const [selectedDate, setSelectedDate] = useState('');
+    const [selectedTime, setSelectedTime] = useState(''); // État pour l'heure
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: ''
+    });
+
+    const handleDateChange = (event) => {
+        setSelectedDate(event.target.value);
+    };
+
+    const handleTimeChange = (event) => {
+        setSelectedTime(event.target.value);
+    };
+
+    const handleFormChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const skillsList = cart.map(item => item.title).join(', ');
+
+        const emailSubject = `Nouveau RDV téléphonique de ${formData.name}`;
+        const emailBody = `
+            Nom: ${formData.name}
+            Email: ${formData.email}
+            Téléphone: ${formData.phone}
+            Compétences sélectionnées: ${skillsList}
+            RDV proposé le: ${selectedDate} à ${selectedTime}
+        `;
+
+        const mailtoLink = `mailto:contact@stevenbachimont.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+        window.location.href = mailtoLink;
+    };
 
     return (
         <div className="checkout-container">
-            {/* Récapitulatif de la commande */}
             <div className="order-summary">
                 <h2>Récapitulatif de la commande</h2>
-                {cart.length > 0 ? (
-                    cart.map(item => (
+                <div className="cart-items">
+                    {cart.map((item) => (
                         <div key={item.id} className="cart-item">
-                            <img src={item.image} alt={item.title} className="cart-item-image" />
-                            <div>
+                            <img className="cart-item-image" src={item.image} alt={item.title} />
                                 <h3>{item.title}</h3>
-                                <p>{item.description}</p>
-                            </div>
                         </div>
-                    ))
-                ) : (
-                    <p>Votre panier est vide.</p>
-                )}
+                    ))}
+                </div>
             </div>
 
-            {/* Formulaire d'informations client */}
             <div className="checkout-form">
-                <h2>Informations client</h2>
-                <form>
-                    <label htmlFor="name">Nom complet</label>
-                    <input type="text" id="name" name="name" required />
+                <h2>Prenons rendez-vous</h2>
+                <p>J'ai sélectionné les compétences ci-contre et je propose un RDV téléphonique le :</p>
 
-                    <label htmlFor="email">Adresse email</label>
-                    <input type="email" id="email" name="email" required />
+                <input
+                    type="date"
+                    value={selectedDate}
+                    onChange={handleDateChange}
+                    required
+                />
+                <input
+                    type="time"
+                    value={selectedTime}
+                    onChange={handleTimeChange}
+                    required
+                />
 
-                    <label htmlFor="address">Adresse</label>
-                    <input type="text" id="address" name="address" required />
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        Nom :
+                        <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleFormChange}
+                            required
+                        />
+                    </label>
+                    <label>
+                        Email :
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleFormChange}
+                            required
+                        />
+                    </label>
+                    <label>
+                        Téléphone :
+                        <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleFormChange}
+                            required
+                        />
+                    </label>
 
-                    <label htmlFor="phone">Numéro de téléphone</label>
-                    <input type="tel" id="phone" name="phone" required />
-
-                    <label htmlFor="message">Message (facultatif)</label>
-                    <textarea id="message" name="message"></textarea>
-
-                    <button type="submit">Confirmer la commande</button>
+                    <button type="submit">Confirmer le RDV</button>
                 </form>
             </div>
         </div>
