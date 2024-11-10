@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../contexte/CartProvider'; // Assurez-vous que le chemin est correct
-import './styles/Checkout.css';
+import './styles/checkout.css';
 
 function Checkout() {
     const { cart } = useContext(CartContext);
