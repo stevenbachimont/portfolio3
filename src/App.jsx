@@ -6,7 +6,7 @@ import Footer from './components/Footer.jsx';
 import Main from './components/Main.jsx';
 import './App.css';
 
-import Page2 from './pages/page2.jsx';
+import Checkout from './pages/checkout.jsx';
 import Page1 from './pages/page1.jsx';
 import Cart from './pages/cart.jsx';
 
@@ -21,7 +21,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Main cart={cart} setCart={setCart} />} />
                 <Route path="/page1" element={<Page1 />} />
-                <Route path="/page2" element={<Page2 />} />
+                <Route path="/checkout" element={<Checkout />} />
                 <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
             </Routes>
             <Footer />
