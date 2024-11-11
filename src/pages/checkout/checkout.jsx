@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useCart } from '../contexte/CartProvider';
-import './styles/checkout.css';
+import { useCart } from '../../contexte/CartProvider.jsx';
+import './checkout.css';
 
 function Checkout() {
     const { cart } = useCart();
