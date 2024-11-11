@@ -24,7 +24,7 @@ function Cart() {
                             <button onClick={() => handleRemove(item.id)}>Remove</button>
                         </li>
                     ))}
-                    <button className="checkout" onClick={() => navigate('/checkout')}>Checkout</button>
+                    <button className={styles.checkout} onClick={() => navigate('/checkout')}>Checkout</button>
                 </ul>
 
             )}

@@ -11,6 +11,27 @@
     color: var(--color-text);
 }
 
+.selector {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(22, 20, 23, 0);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selector select {
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    background-color: var(--color-input-background);
+    color: var(--color-text);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
 .cards {
     padding: 20px;
     margin-top: 0;
