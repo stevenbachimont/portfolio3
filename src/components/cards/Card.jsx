@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../contexte/CartProvider.jsx';
 import './Card.css';
 import StarRating from '../StarRating.jsx';
-import styles from '../Card.module.css';
+import styles from './Card.module.css';
 
 function Card({ id, image, title, description, rating_rate }) {
     const { cart, addToCart } = useContext(CartContext);

@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import styles from './Card.module.css';
+import styles from './cards/Card.module.css';
 
 function StarRating({ rating }) {
     const [hover, setHover] = useState(null);
