@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import { CartProvider } from './contexte/CartProvider.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
-import Footer from './components/Footer.jsx';
+import Footer from './components/footer/Footer.jsx';
 import { useTranslation } from 'react-i18next';
 import './i18n';
 
