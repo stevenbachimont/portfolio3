@@ -1,33 +1,37 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import { CartProvider } from './contexte/CartProvider.jsx';
-import Head from './components/Head.jsx';
+import Navbar from './components/Navbar/Navbar.jsx';
 import Footer from './components/Footer.jsx';
-import Main from './components/Main.jsx';
-import './App.css';
+import { useTranslation } from 'react-i18next';
+import './i18n';
 
-import Checkout from './pages/checkout.jsx';
-import Page1 from './pages/page1.jsx';
-import Cart from './pages/cart.jsx';
+import styles from "./App.module.css";
+import Checkout from './pages/checkout/checkout.jsx';
+import Home from "./pages/home/home.jsx";
+import Shop from './pages/shop/shop.jsx';
+import Cart from './pages/cart/cart.jsx';
 
 function App() {
-    // État du panier
     const [cart, setCart] = useState([]);
+    const { t } = useTranslation();
 
     return (
-        <CartProvider>
-        <Router>
-            <Head />
-            <Routes>
-                <Route path="/" element={<Main cart={cart} setCart={setCart} />} />
-                <Route path="/page1" element={<Page1 />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
-            </Routes>
-            <Footer />
-        </Router>
-        </CartProvider>
-    );
-}
+        <div className={styles.App}>
+            <CartProvider>
+                <Router>
+                    <Navbar />
+                    <Routes>
+                        <Route path="/" element={<Home cart={cart} setCart={setCart}/>}/>
+                        <Route path="/shop" element={<Shop cart={cart} setCart={setCart}/>}/>
+                        <Route path="/checkout" element={<Checkout/>}/>
+                        <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>}/>
+                    </Routes>
+                    <Footer/>
+                </Router>
+            </CartProvider>
+        </div>
+            );
+            }
 
-export default App;
+            export default App;

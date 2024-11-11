@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import "/src/components/Main.css";
-import Card from './Card.jsx';
+import styles from "./Shop.module.css";
+import Card from '../../components/cards/Card.jsx';
 
 
-function Main({ cart, setCart }) {
+function Shop({ cart, setCart }) {
     const [projects, setProjects] = useState([]);
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('');
@@ -34,12 +34,13 @@ function Main({ cart, setCart }) {
 
     return (
         <>
-            <div className="title-container">
+            <div className={styles.title}>
                 <h1>Bienvenue dans notre Marketplace</h1>
+                <p>Explorez nos projets et ajoutez-les à votre panier !</p>
             </div>
 
             <div className="category-selector">
-                <select onChange={handleCategoryChange} value={selectedCategory}>
+            <select onChange={handleCategoryChange} value={selectedCategory}>
                     <option value="">All Categories</option>
                     {categories.map(category => (
                         <option key={category} value={category}>{category}</option>
@@ -47,17 +48,17 @@ function Main({ cart, setCart }) {
                 </select>
             </div>
 
-            <div className="card-container">
+            <div className={styles.cards}>
                 {filteredProjects.map(project => (
                     <Card key={project.id} {...project} addToCart={() => addToCart(project)} />
                 ))}
             </div>
 
-            <div className="bottom-container">
-                <p>Explorez nos projets et ajoutez-les à votre panier !</p>
+            <div className={styles.bottom}>
+                <p>Pensez à valider votre panier !!</p>
             </div>
         </>
     );
 }
 
-export default Main;
+export default Shop;

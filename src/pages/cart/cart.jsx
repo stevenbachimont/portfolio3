@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { useCart } from '../contexte/CartProvider';
-import './styles/cart.css';
+import { useCart } from '../../contexte/CartProvider.jsx';
+import styles from './Cart.module.css';
 
 function Cart() {
     const { cart, removeFromCart } = useCart();
@@ -11,7 +11,7 @@ function Cart() {
     };
 
     return (
-        <div className="cart-container">
+        <div className={styles.container}>
             <h2>Your Skills Cart</h2>
             {cart.length === 0 ? (
                 <p>Your cart is empty.</p>
