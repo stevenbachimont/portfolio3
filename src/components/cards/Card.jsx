@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { CartContext } from '../../contexte/CartProvider.jsx';
-import './Card.css';
 import StarRating from '../StarRating.jsx';
 import styles from './Card.module.css';
 
@@ -17,7 +16,7 @@ function Card({ id, image, title, description, rating_rate }) {
     };
 
     return (
-        <div className="card">
+        <div className={styles.card}>
             <img src={image} alt={title} />
             <h2 className={styles.violetColor}>{title}</h2>
             <p>{description}</p>

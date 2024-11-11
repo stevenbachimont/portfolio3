@@ -39,7 +39,7 @@ function Shop({ cart, setCart }) {
                 <p>Explorez nos projets et ajoutez-les à votre panier !</p>
             </div>
 
-            <div className="category-selector">
+            <div className={styles.selector}>
             <select onChange={handleCategoryChange} value={selectedCategory}>
                     <option value="">All Categories</option>
                     {categories.map(category => (
