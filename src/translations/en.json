@@ -2,8 +2,7 @@
 "hero":{
   "title": "Hi, I'm Steven",
   "description": "I'm a web developer with 1 year of experience using ReactJS, Express.js, MySQL and Node.js. I'm learning, TypeScript, NextJS and Docker. Reach out if you'd like to learn more!",
-  "cvLink": "my CV",
-  "altText": "An image of me"
+  "cvLink": "my CV"
 },
 
 "about": {
@@ -70,6 +69,23 @@
 
       }
     ]
+  },
+
+  "nav": {
+    "shop": "Shop",
+    "cart": "Cart",
+    "title": "Shopfolio"
+  },
+
+  "home": {
+    "welcome": "Welcome to Shopfolio",
+    "description": "Discover our collection"
+  },
+
+  "cart": {
+    "empty": "Your cart is empty",
+    "checkout": "Checkout",
+    "total": "Total"
   }
 }
 

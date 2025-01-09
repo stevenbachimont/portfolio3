@@ -1,16 +1,8 @@
 :root {
-  /* Colours */
-  --color-text: #fff;
-  --color-primary: rgba(104, 108, 124, 0.25);
-  --color-secondary: #536e9e;
-  --color-dark: #061427;
-  --color-bg: #000000;
-  --hoover: #840a97;
-  --color-input-background: rgba(255, 255, 255, 0.1);
-  --color-border: rgba(161, 156, 156, 0.1);
-
-  /* Fonts */
-  --font-roboto: "Roboto";
+  --color-bg: #2b2a2a;
+  --color-text: #9c1996;
+  --color-primary: #147efb;
+  --color-secondary: #0056b3;
 }
 
 

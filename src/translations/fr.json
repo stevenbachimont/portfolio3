@@ -2,8 +2,7 @@
   "hero":{
   "title": "Bonjour, je suis Steven",
   "description": "Je suis un développeur web avec 1 an d'expérience en utilisant React, Express, MySQL et NodeJS. Je suis en train d'apprendre TypeScript, NextJS et Docker. Contactez-moi si vous souhaitez en savoir plus !",
-  "cvLink": "mon cv",
-  "altText": "une image de moi"
+  "cvLink": "mon cv"
   },
 
   "about": {
@@ -70,5 +69,22 @@
 
       }
     ]
+  },
+
+  "nav": {
+    "shop": "Boutique",
+    "cart": "Panier",
+    "title": "Shopfolio"
+  },
+
+  "home": {
+    "welcome": "Bienvenue sur Shopfolio",
+    "description": "Découvrez notre collection"
+  },
+
+  "cart": {
+    "empty": "Votre panier est vide",
+    "checkout": "Payer",
+    "total": "Total"
   }
 }

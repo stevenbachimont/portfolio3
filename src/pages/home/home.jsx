@@ -1,13 +1,20 @@
+import { useTranslation } from "react-i18next";
 import styles from "./Home.module.css";
+import { getImageUrl } from "../../utils";
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
-      <>
-    <div className={styles.container}>
-        <h2>Hi, I'm Steven</h2>
-        <p>I'm a web developer with 1 year of experience using ReactJS, Express.js, MySQL and Node.js. I'm learning, TypeScript, NextJS and Docker. Reach out if you'd like to learn more!</p>
-    </div>
-      </>
+    <section className={styles.container}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>{t('hero.title')}</h1>
+        <p className={styles.description}>{t('hero.description')}</p>
+        <a href="https://stevenbachimont.github.io/cv/" target="_blank" className={styles.contactBtn} download>
+          {t('hero.cvLink')}
+        </a>
+      </div>
+    </section>
   );
 }
 

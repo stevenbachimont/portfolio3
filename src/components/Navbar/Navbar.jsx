@@ -7,15 +7,16 @@ import {Link} from "react-router-dom";
 
 function Navbar () {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'fr' : 'en';
+    i18n.changeLanguage(newLang);
   };
 
   return (
       <nav className={styles.navbar}>
-          <Link to="/" className={styles.title}>shopfolio</Link>
+          <Link to="/" className={styles.title}>{t('nav.title')}</Link>
         <div className={styles.menu}>
           <img
               className={styles.menuBtn}
@@ -32,12 +33,16 @@ function Navbar () {
               className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
               onClick={() => setMenuOpen(false)}
           >
-            <Link to={"/shop"} className="headLien">shop</Link>
-            <Link to="/cart" className="headLien">cart</Link>
+            <Link to={"/shop"} className="headLien">{t('nav.shop')}</Link>
+            <Link to="/cart" className="headLien">{t('nav.cart')}</Link>
             <li>
               <label className={styles.switch}>
                 <span className={styles.tr}>EN</span>
-                <input type="checkbox" onChange={() => changeLanguage(i18n.language === 'en' ? 'fr' : 'en')}/>
+                <input 
+                  type="checkbox" 
+                  checked={i18n.language === 'fr'}
+                  onChange={toggleLanguage}
+                />
                 <span className={`${styles.slider} ${styles.round}`}></span>
                 <span className={styles.tr}>FR</span>
               </label>
