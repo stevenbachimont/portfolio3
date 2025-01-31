@@ -3,7 +3,7 @@ import styles from "./Home.module.css";
 import { getImageUrl } from "../../utils";
 
 function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <section className={styles.container}>

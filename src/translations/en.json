@@ -5,87 +5,23 @@
   "cvLink": "my CV"
 },
 
-"about": {
-"title": "ABOUT ME",
-"frontendTitle": "Frontend Developer",
-"frontendDescription": "I'm a frontend developer who builds responsive and optimized Websites with React.js, Next.js and Typescript",
-"backendTitle": "Backend Developer",
-"backendDescription": "I like to develop fast and optimised backend systems and APIs with Node.js, express and MySQL",
-"designerTitle": "UI Designer",
-"designerDescription": "I have designed landing pages and created design interfaces with Figma and Excalidraw"
+"shop": {
+  "title": "Shop",
+  "description": "Discover my projects and services"
 },
 
+"cart": {
+  "title": "Your Skills Cart",
+  "description": "Your cart is empty."
+},
 
-  "exp": {
-    "title": "Experiences",
-    "history": [
-      {
-        "role": "Fullstack developer",
-        "organisation": "R&V",
-        "startDate": "Sept, 2023",
-        "endDate": "Present",
-        "experiences": "Personal projects around data science, social network and more",
-        "imageSrc": "history/R&V.png"
-      },
-      {
-        "role": "Student",
-        "organisation": "Wild Code School",
-        "startDate": "Feb, 2024",
-        "endDate": "Jul, 2024",
-        "experiences": "Learned fullstack technologies; ReactJS, Express.js, MySQL...",
-        "imageSrc": "history/Wild.svg"
-      },
-      {
-        "role": "Digital Humanities Researcher",
-        "organisation": "Comet Lab",
-        "startDate": "Mar, 2020",
-        "endDate": "Aug, 2021",
-        "experiences": "Prototyping, proof of concepts, augmented reality with Unity, 3D modeling with Blender",
-        "imageSrc": "history/comet.png"
-      }
-    ]
-  },
-
-  "proj": {
-    "title": "Projets",
-    "projects": [
-      {
-        "title": "React_Vite_githubActions",
-        "description": "This is a project made to learn latest languages by building an app\n."
-      },
-      {
-        "title": "Jungle",
-        "description": "Group project at school : visit the web differently + sound effect\n."
-
-      },
-      {
-        "title": "R&V",
-        "description": "Personal project to calculate our personal and team carbon footprint\n."
-
-      },
-      {
-        "title": "Faketory",
-        "description": "Group project at school: with Express.js backend deployed via docker-compose\n."
-
-      }
-    ]
-  },
-
-  "nav": {
-    "shop": "Shop",
-    "cart": "Cart",
-    "title": "Shopfolio"
-  },
-
-  "home": {
-    "welcome": "Welcome to Shopfolio",
-    "description": "Discover our collection"
-  },
-
-  "cart": {
-    "empty": "Your cart is empty",
-    "checkout": "Checkout",
-    "total": "Total"
-  }
+"nav": {
+  "title": "Steven Bachimont",
+  "shop": "Shop",
+  "cart": "Cart",
+  "about": "About",
+  "contact": "Contact"
 }
+}
+
 

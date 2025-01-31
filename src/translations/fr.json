@@ -5,69 +5,21 @@
   "cvLink": "mon cv"
   },
 
-  "about": {
-    "title": "À propos de moi",
-    "frontendTitle": "Développeur Frontend",
-    "frontendDescription": "Je suis un développeur frontend et je construis des sites réactifs et optimisés avec React.js, Next.js et Typescript",
-    "backendTitle": "Développeur Backend",
-    "backendDescription": "J'aime développer des systèmes backend rapides et optimisés et des API avec Node.js, express et MySQL",
-    "designerTitle": "Concepteur d'interface utilisateur",
-    "designerDescription": "Je peux concevoir des pages d'accueil et j'ai créé des systèmes de design avec Figma et Excalidraw"
+  "shop": {
+    "title": "Shop",
+    "description": "Découvrez mes projets et services"
   },
 
-  "exp": {
-    "title": "Expérience",
-    "history": [
-      {
-        "role": "Développement complet du site",
-        "organisation": "projet personnel R&V",
-        "startDate": "Sept, 2023",
-        "endDate": "Present",
-        "experiences": "Data sciences, visualisations de données, réseau social..",
-        "imageSrc": "history/R&V.png"
-      },
-      {
-        "role": "Student",
-        "organisation": "Wild Code School",
-        "startDate": "Feb, 2024",
-        "endDate": "Jul, 2024",
-        "experiences": " J'ai une expérience des technologies fullstack ; React, Express, Mysql...",
-        "imageSrc": "history/Wild.svg"
-      },
-      {
-        "role": "Digital Humanities Researcher",
-        "organisation": "Comet Lab",
-        "startDate": "Mar, 2020",
-        "endDate": "Aug, 2021",
-        "experiences": "Prototypage, preuve de concept, réalité augmentée avec unity, modélisation 3D avec blender",
-        "imageSrc": "history/comet.png"
-      }
-    ]
+  "cart": {
+    "title": "Votre panier de compétences",
+    "description": "Votre panier est vide."
   },
 
-
-  "proj": {
-    "title": "Projets",
-    "projects": [
-      {
-        "title": "React_Vite_githubActions",
-        "description": "Il s'agit d'un projet visant à apprendre les langues les plus récentes en construisant une application.\n."
-      },
-      {
-        "title": "Jungle",
-        "description": "Projet de groupe à l'école : visiter le web différemment + effet sonore\n."
-
-      },
-      {
-        "title": "R&V",
-        "description": "Projet personnel de calcul de l'empreinte carbone personnelle et de l'équipe\n."
-
-      },
-      {
-        "title": "Faketory",
-        "description": "Projet de groupe à l'école : avec backend express et déploiement docker-compose\n."
-
-      }
-    ]
+  "nav": {
+    "title": "Steven Bachimont",
+    "shop": "Shop",
+    "cart": "Panier",
+    "about": "À propos",
+    "contact": "Contact"
   }
 }

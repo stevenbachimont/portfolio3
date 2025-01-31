@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 import styles from "./Shop.module.css";
 import Card from '../../components/cards/Card.jsx';
 
@@ -7,6 +8,7 @@ function Shop({ cart, setCart }) {
     const [projects, setProjects] = useState([]);
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('');
+    const { t } = useTranslation();
 
     useEffect(() => {
         {/*fetch(${import.meta.env.VITE_API_URL}/api/projects)*/}
@@ -33,11 +35,9 @@ function Shop({ cart, setCart }) {
     );
 
     return (
-        <>
-            <div className={styles.title}>
-                <h1>Bienvenue dans notre Marketplace</h1>
-                <p>Explorez nos projets et ajoutez-les à votre panier !</p>
-            </div>
+        <div className={styles.container}>
+            <h1 className={styles.title}>{t('shop.title')}</h1>
+            <p className={styles.description}>{t('shop.description')}</p>
 
             <div className={styles.selector}>
             <select onChange={handleCategoryChange} value={selectedCategory}>
@@ -57,7 +57,7 @@ function Shop({ cart, setCart }) {
             <div className={styles.bottom}>
                 <p>Pensez à valider votre panier !!</p>
             </div>
-        </>
+        </div>
     );
 }
 

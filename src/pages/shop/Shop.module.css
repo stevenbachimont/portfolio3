@@ -11,6 +11,16 @@
     color: var(--color-text);
 }
 
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(24, 24, 24, 0);
+    padding: 20px;
+    color: var(--color-text);
+}
+
 .selector {
     display: flex;
     justify-content: center;

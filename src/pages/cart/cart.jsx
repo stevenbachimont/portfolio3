@@ -1,10 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 import { useCart } from '../../contexte/CartProvider.jsx';
 import styles from './Cart.module.css';
 
 function Cart() {
     const { cart, removeFromCart } = useCart();
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     const handleRemove = (id) => {
         removeFromCart(id);
@@ -12,9 +14,9 @@ function Cart() {
 
     return (
         <div className={styles.container}>
-            <h2>Your Skills Cart</h2>
+            <h2>{t('cart.title')}</h2>
             {cart.length === 0 ? (
-                <p>Your cart is empty.</p>
+                <p>{t('cart.description')}</p>
             ) : (
                 <ul>
                     {cart.map((item) => (
