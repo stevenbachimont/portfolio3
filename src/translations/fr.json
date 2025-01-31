@@ -21,5 +21,10 @@
     "cart": "Panier",
     "about": "À propos",
     "contact": "Contact"
+  },
+
+  "card": {
+    "added": "Ajouté",
+    "addToCart": "Ajouter au panier"
   }
 }

@@ -18,17 +18,18 @@
     align-items: center;
     justify-content: center;
     background-color: #1c1c1c;
-    border: 1px solid #777575;
     border-radius: 8px;
     overflow: hidden;
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 300px;
     margin: 10px;
     transition: transform 0.2s;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
     border: 1px solid #cccc0c;
 }
 
@@ -44,11 +45,6 @@
     color: #edeaea;
 }
 
-.card p {
-    font-size: 1em;
-    color: #e6e3e3;
-    padding: 0 10px 10px;
-}
 
 .card .star-rating {
     display: flex;
@@ -78,4 +74,76 @@ input[type="radio"] {
 
 .addToCartButton:hover {
     background-color: #218838;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: var(--color-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+.modalContent {
+    display: flex;
+    gap: 2rem;
+}
+
+.modalImage {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modalInfo {
+    flex: 1;
+}
+
+.modalInfo h2 {
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.description {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .modalContent {
+        flex-direction: column;
+    }
+
+    .modalImage {
+        max-width: 100%;
+    }
 }

@@ -21,6 +21,11 @@
   "cart": "Cart",
   "about": "About",
   "contact": "Contact"
+},
+
+"card": {
+  "added": "Added",
+  "addToCart": "Add to Cart"
 }
 }
 
