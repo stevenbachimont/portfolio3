@@ -9,6 +9,12 @@ export default defineConfig({
     port: 8282,
     watch: {
       usePolling: true
-    }
+    },
+    allowedHosts: [
+      'stevenbachimont.com',
+      'www.stevenbachimont.com',
+      'localhost',
+      '.localhost'
+    ]
   }
 })
