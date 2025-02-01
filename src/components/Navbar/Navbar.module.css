@@ -73,7 +73,6 @@
     align-items: center;
     gap: 13px;
     border-radius: 10px;
-    box-shadow: 0 0 14px 0 rgba(198, 196, 196, 0.25);
     background: rgb(103, 25, 109);
     background: linear-gradient(
       0deg,
