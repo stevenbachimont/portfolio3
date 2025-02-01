@@ -7,7 +7,8 @@
 
 "shop": {
   "title": "Shop",
-  "description": "Discover my projects and services"
+  "description": "Discover my projects and services",
+  "rappel" : "Don't forget to validate your cart !"
 },
 
 "cart": {

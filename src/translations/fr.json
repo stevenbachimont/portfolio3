@@ -1,13 +1,14 @@
 {
   "hero":{
   "title": "Bonjour, je suis Steven",
-  "description": "Je suis un développeur web avec 2 an d'expérience en utilisant  ReactJS, SvelteJS, SolidJS, TypeScript, Express.js, GO, FastAPI, MySQL et Docker.Contactez-moi si vous souhaitez en savoir plus !",
+  "description": "Je suis un développeur web avec 2 ans d'expérience en utilisant  ReactJS, SvelteJS, SolidJS, TypeScript, Express.js, GO, FastAPI, MySQL et Docker.Contactez-moi si vous souhaitez en savoir plus !",
   "cvLink": "mon cv"
   },
 
   "shop": {
     "title": "Shop",
-    "description": "Découvrez mes projets et services"
+    "description": "Découvrez mes projets et services",
+    "rappel" : "Pensez à valider votre panier !"
   },
 
   "cart": {
