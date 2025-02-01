@@ -80,7 +80,7 @@ function Checkout() {
                 />
 
                 <form onSubmit={handleSubmit}>
-                    <label>
+                    <label className="checkout-label">
                         Nom :
                         <input
                             type="text"
@@ -90,7 +90,7 @@ function Checkout() {
                             required
                         />
                     </label>
-                    <label>
+                    <label className="checkout-label">
                         Email :
                         <input
                             type="email"
@@ -100,7 +100,7 @@ function Checkout() {
                             required
                         />
                     </label>
-                    <label>
+                    <label className="checkout-label">
                         Téléphone :
                         <input
                             type="tel"
