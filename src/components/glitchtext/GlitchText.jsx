@@ -67,12 +67,23 @@ class Glitch {
 
 const GlitchText = ({ text, className, component: Component = "div", ...props }) => {
     const textRef = useRef(null);
+    const glitchRef = useRef(null);
 
     useEffect(() => {
-        const glitch = new Glitch(textRef.current, 5, 2000, 100, 3000);
-        glitch.init();
-        glitch.glitch();
-    }, []);
+        if (textRef.current) {
+            glitchRef.current = new Glitch(textRef.current, 5, 2000, 100, 3000);
+            glitchRef.current.init();
+            glitchRef.current.glitch();
+        }
+    }, []); // Initialisation
+
+    useEffect(() => {
+        if (textRef.current && glitchRef.current) {
+            textRef.current.innerText = text;
+            glitchRef.current.innerText = text;
+            glitchRef.current.init();
+        }
+    }, [text]); // Mise à jour quand le texte change
 
     return (
         <Component className={className} {...props} ref={textRef}>
