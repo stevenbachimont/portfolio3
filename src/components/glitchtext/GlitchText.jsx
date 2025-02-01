@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 
 const chars = "Σ×Π#-_¯—→↓↑←0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ本网站目前正在重建，以提高导航的质量本サイトは、ナビゲーションの品質向上のため、現在再構築中です。для улучшения качества навигации";
 
+
 class Glitch {
     constructor(selector, numberOfGlitchedLetter, timeGlitch, timePerLetter, timeBetweenGlitch) {
         this.selector = selector;
@@ -14,6 +15,7 @@ class Glitch {
         this.timePerLetter = timePerLetter;
         this.maxCount = Math.floor(this.timeGlitch / this.timePerLetter);
         this.count = 0;
+        this.interval = null;
     }
 
     init() {
@@ -59,9 +61,18 @@ class Glitch {
     }
 
     glitch() {
-        setInterval(() => {
+        if (this.interval) {
+            clearInterval(this.interval);
+        }
+        this.interval = setInterval(() => {
             this.update();
         }, this.timePerLetter);
+    }
+
+    cleanup() {
+        if (this.interval) {
+            clearInterval(this.interval);
+        }
     }
 }
 
@@ -71,11 +82,17 @@ const GlitchText = ({ text, className, component: Component = "div", ...props })
 
     useEffect(() => {
         if (textRef.current) {
-            glitchRef.current = new Glitch(textRef.current, 5, 2000, 100, 3000);
+            glitchRef.current = new Glitch(textRef.current, 8, 8000, 100, 3000);  // Paramètres ralentis
             glitchRef.current.init();
             glitchRef.current.glitch();
         }
-    }, []); // Initialisation
+
+        return () => {
+            if (glitchRef.current) {
+                glitchRef.current.cleanup();
+            }
+        };
+    }, []);
 
     useEffect(() => {
         if (textRef.current && glitchRef.current) {
@@ -83,7 +100,7 @@ const GlitchText = ({ text, className, component: Component = "div", ...props })
             glitchRef.current.innerText = text;
             glitchRef.current.init();
         }
-    }, [text]); // Mise à jour quand le texte change
+    }, [text]);
 
     return (
         <Component className={className} {...props} ref={textRef}>

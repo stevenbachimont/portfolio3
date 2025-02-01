@@ -4,9 +4,11 @@ import { useTranslation } from "react-i18next";
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 import {Link} from "react-router-dom";
+import GlitchText from "../glitchtext/GlitchText.jsx";
 
 function Navbar () {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -16,7 +18,18 @@ function Navbar () {
 
   return (
       <nav className={styles.navbar}>
-          <Link to="/" className={styles.title}>{t('nav.title')}</Link>
+          <Link 
+            to="/" 
+            className={styles.title}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {isHovered ? (
+              <GlitchText text={t('nav.title')} />
+            ) : (
+              t('nav.title')
+            )}
+          </Link>
         <div className={styles.menu}>
           <img
               className={styles.menuBtn}

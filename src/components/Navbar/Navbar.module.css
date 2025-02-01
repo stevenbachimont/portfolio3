@@ -11,12 +11,19 @@
 }
 
 .title {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--color-text);
+  transition: all 0.3s ease;
 }
 
+.title > div {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
 
 .menuBtn {
   display: none;
