@@ -7,7 +7,8 @@
 
   "shop": {
     "title": "Shop",
-    "description": "Découvrez mes projets et services"
+    "description": "Découvrez mes projets et services",
+    "rappel" : "Pensez à valider votre panier !"
   },
 
   "cart": {

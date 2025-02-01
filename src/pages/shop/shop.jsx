@@ -11,7 +11,7 @@ function Shop({ cart, setCart }) {
     const { t } = useTranslation();
 
     useEffect(() => {
-        {/*fetch(${import.meta.env.VITE_API_URL}/api/projects)*/}
+        // fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
         fetch(`https://api.stevenbachimont.com/api/projects`)
             .then(response => response.json())
             .then(data => {
@@ -55,7 +55,7 @@ function Shop({ cart, setCart }) {
             </div>
 
             <div className={styles.bottom}>
-                <p>Pensez à valider votre panier !!</p>
+                <p>{t('shop.rappel')}</p>
             </div>
         </div>
     );
