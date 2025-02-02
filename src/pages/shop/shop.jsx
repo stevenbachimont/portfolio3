@@ -7,7 +7,7 @@ import Card from '../../components/cards/Card.jsx';
 function Shop({ cart, setCart }) {
     const [projects, setProjects] = useState([]);
     const [categories, setCategories] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('Actually');
     const { t } = useTranslation();
 
     useEffect(() => {
@@ -41,7 +41,7 @@ function Shop({ cart, setCart }) {
 
             <div className={styles.selector}>
             <select onChange={handleCategoryChange} value={selectedCategory}>
-                    <option value="">All Categories</option>
+                    <option value="">All</option>
                     {categories.map(category => (
                         <option key={category} value={category}>{category}</option>
                     ))}

@@ -24,7 +24,6 @@ function Card({ id, image, title, description, rating_rate }) {
             <div className={styles.card} onClick={() => setIsModalOpen(true)}>
                 <img src={image} alt={title} />
                 <h2 className={styles.violetColor}>{title}</h2>
-                <StarRating rating={rating_rate} />
                 <button
                     className={styles.addToCartButton}
                     onClick={handleAddToCart}

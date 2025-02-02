@@ -45,12 +45,8 @@
     color: #edeaea;
 }
 
-
 .card .star-rating {
-    display: flex;
-    margin-left: 50%;
-    padding: 10px;
-    margin-top: auto;
+    display: none;
 }
 
 input[type="radio"] {
@@ -138,6 +134,11 @@ input[type="radio"] {
     color: var(--color-text);
 }
 
+.modalInfo .star-rating {
+    display: flex;
+    margin: 10px 0;
+}
+
 @media (max-width: 768px) {
     .modalContent {
         flex-direction: column;
@@ -164,6 +165,12 @@ input[type="radio"] {
         padding: 5px 10px;
         font-size: 0.8em;
     }
+
+    .card .star-rating {
+        transform: scale(0.5);
+        margin-left: 40%;
+        display: none;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -184,7 +191,7 @@ input[type="radio"] {
     }
 
     .card .star-rating {
-        transform: scale(0.8);
+        transform: scale(0.5);
         margin-left: 40%;
     }
 }
